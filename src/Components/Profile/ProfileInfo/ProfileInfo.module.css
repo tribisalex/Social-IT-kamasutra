@@ -1,0 +1,19 @@
+.descriptionBlock {
+    padding: 10px;
+}
+
+.descriptionBlock img {
+    width: 150px;
+    border-radius: 25px;
+}
+
+.aboutMe {
+    bottom: auto;
+    text-align: center;
+    font: full-width;
+}
+
+.jobFind img {
+    width: 150px;
+    border-radius: 90px;
+}

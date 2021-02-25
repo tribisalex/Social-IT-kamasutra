@@ -1,0 +1,47 @@
+.dialogs {
+display: grid;
+grid-template-columns: 2fr 5fr 5fr;
+}
+
+.dialogsItems {
+     padding: 10px;
+     text-decoration: none;
+}
+
+.dialogsItems a {
+color: white;
+  text-decoration: none;
+}
+
+.dialogsItems .active {
+    color: rgb(118, 128, 118);
+    color: white;
+}
+
+.messages {
+padding: 10px;
+text-align: left;
+}
+
+.answer {
+  padding: 10px;
+  text-align: right;
+}
+
+.answer img {
+  width: 50px;
+  border-radius: 30%;
+}
+
+.messages .message {
+  color: white;
+}
+
+.messages img {
+  width: 50px;
+  border-radius: 30%;
+}
+
+.dialog .activeLink {
+color: yellow;
+}
