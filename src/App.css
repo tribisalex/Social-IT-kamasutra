@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
 .app-wrapper {
-margin: 0 auto;
-display: grid;
-width: 1200px; 
-grid-template-areas: "h h" "n c" "s c";
-grid-template-rows: 60px 1fr 1fr;
-grid-template-columns: 2fr 10fr;
-font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-font-size: large;
+    margin: 0 auto;
+    display: grid;
+    width: 85%;
+    grid-template-areas: "h h" "n c" "s c" "f f";
+    grid-template-rows: 70px 1fr 1fr 70px;
+    grid-template-columns: 2fr 9fr;
+    grid-gap: 6px;
+    font-family: 'Josefin Sans', cursive;
+    font-size: large;
 }
 
 .app-wrapper-content {
-  grid-area: c;
-  background-color: #6d6e71;
-  margin: 0.5%;
+    grid-area: c;
+    background-color: #f0b52b;
 }

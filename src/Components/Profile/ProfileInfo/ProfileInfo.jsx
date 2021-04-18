@@ -1,30 +1,35 @@
 import React from 'react';
 import s from './ProfileInfo.module.css';
 import Preloader from "../../Common/Preloader/Preloader";
-import FindJob from "../../assets/image/FindJob.jpg";
-import NotFindJob from "../../assets/image/NotFindJob.jpg";
-import ProfileStatus from "./ProfileStatus";
+import FindJob from "../../assets/image/FindJob.png";
+import NotFindJob from "../../assets/image/NotFindJob.png";
+import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
+import userPhoto from "../../assets/image/user.jpg";
 
 
-const ProfileInfo = (props) => {
-    if (!props.profile) {
+const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
+
+    if (!profile) {
         return <Preloader/>
+    }
+
+    const onMainPhotoSelected = (e) => {
+        if (e.target.files.length) {
+            savePhoto (e.target.files[0]);
+        }
     }
 
     return (
         <div>
-            {/*<div>
-                <img src="https://goarctic.ru/upload/iblock/444/4445f76ff7261804dfc52f8531daa7a4.jpg" width="400"
-                     alt="Text"/>
-            </div>*/}
             <div className={s.descriptionBlock}>
-                    <img src={props.profile.photos.large}/>
-                    <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+                <img src={profile.photos.large || userPhoto} className={s.mainPhoto}/>
+                { isOwner && <input type={"file"} onChange={onMainPhotoSelected} />}
+                    <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
                     <span className={s.aboutMe}>
-                        Немного обо мне: {props.profile.aboutMe}
+                        Немного обо мне: {profile.aboutMe}
                     </span>
                 <div className={s.jobFind}>
-                    LookingForAJob: <img src={props.profile.lookingForAJob === true ? FindJob : NotFindJob}/>
+                    LookingForAJob: <img src={profile.lookingForAJob === true ? FindJob : NotFindJob}/>
                 </div>
             </div>
         </div>

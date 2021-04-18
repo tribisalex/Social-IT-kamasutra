@@ -1,0 +1,21 @@
+.footer {
+    grid-area: f;
+    background-color: #3752a5;
+    border-bottom-style: none;
+}
+
+.footer img {
+    margin: 5px;
+    border-radius: 20%;
+    box-shadow: 3px 3px;
+    align-content: baseline;
+    width: 60px;
+    height: 60px;
+    vertical-align: center;
+}
+
+.text {
+    margin: 5px;
+    align-content: baseline;
+    vertical-align: center;
+}
