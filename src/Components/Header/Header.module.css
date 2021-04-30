@@ -1,19 +1,46 @@
 .header {
-  grid-area: h;
-  background-color: antiquewhite;
- margin: 0.5%;
+    grid-area: h;
+    background-color: #3752a5;
+    border-bottom-style: none;
 }
-  
+
 .header img {
-  border-radius: 30%;
-  padding: 10px;
-  width: 50px;
-  }
+    margin: 5px;
+    border-radius: 20%;
+    box-shadow: 3px 3px;
+    align-content: baseline;
+    width: 60px;
+    height: 60px;
+    vertical-align: center;
+}
 
 .loginBlock {
-  float: right;
+    float: right;
+    padding-top: 15px;
+    padding-right: 10px;
+    vertical-align: center;
+    color: white;
 }
 
 .loginBlock a {
-  color: white;
+    color: white;
+}
+
+button {
+    background: #eea924;
+    border-radius: 10px;
+    padding: 0.5em;
+    color: white;
+}
+
+button:focus {
+    color: red;
+    border: 0px solid black;
+    border-radius: 10px;
+
+}
+
+button:hover {
+    border: 1px solid black;
+    border-radius: 10px;
 }

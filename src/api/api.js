@@ -40,12 +40,34 @@ export const profileApi = {
     },
 
     updateStatus(status) {
-        return instance.put(`profile/status`, {status: status})
+        return instance.put(`profile/status`, {status})
+    },
+    savePhoto(photoFile) {
+        const formData = new FormData ();
+        formData.append ("image", photoFile);
+
+        return instance.put(`profile/photo`, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        });
     }
 }
 
 export const authApi = {
     me() {
-        return instance.get(`auth/me`)
+        return instance.get(`auth/me`);
+    },
+    login(email, password, rememberMe=false, captcha= null){
+        return instance.post(`auth/login`, {email, password, rememberMe, captcha});
+    },
+    logout(email, password, rememberMe) {
+        return instance.delete(`auth/login`, {email, password, rememberMe});
+    }
+}
+
+export const securityApi = {
+    getCaptchaUrl() {
+        return instance.get(`security/get-captcha-url`);
     }
 }

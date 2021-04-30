@@ -2,9 +2,10 @@
     padding: 10px;
 }
 
-.descriptionBlock img {
+.mainPhoto {
     width: 150px;
-    border-radius: 25px;
+    border-radius: 100px;
+    border: 5px solid #3752a5;
 }
 
 .aboutMe {
@@ -14,6 +15,5 @@
 }
 
 .jobFind img {
-    width: 150px;
-    border-radius: 90px;
+    width: 30px;
 }

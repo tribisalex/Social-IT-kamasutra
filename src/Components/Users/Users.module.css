@@ -4,9 +4,3 @@
     border-radius: 35px;
     align-content: center;
 }
-
-.selectedPage {
-    text-decoration-width: unset;
-    font-weight: bold;
-    color: white;
-}
